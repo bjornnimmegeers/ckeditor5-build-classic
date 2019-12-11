@@ -87,7 +87,8 @@
   },
   "eslintIgnore": [
     "build/**",
-    "packages/**"
+    "packages/**",
+    "src/**"
   ],
   "husky": {
     "hooks": {
