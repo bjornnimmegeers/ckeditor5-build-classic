@@ -57,8 +57,6 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
     TableToolbar,
-    
-    Base64UploadAdapter
 ];
 
 // Editor configuration.
@@ -82,8 +80,6 @@ ClassicEditor.defaultConfig = {
 			'mediaEmbed',
 			'undo',
             'redo',
-            
-            'base64uploadadapter'
 		]
 	},
 	image: {
@@ -104,3 +100,17 @@ ClassicEditor.defaultConfig = {
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
+
+ClassicEditor
+	.create( document.querySelector( '#editor' ), {
+		// I know about `ClassicEditor.build` properties so it is easy for me.
+		plugins: ClassicEditor.build.plugins.concat( [ Base64UploadAdapter ] )
+	} )
+	.then( editor => {
+		console.log( '#editor2', editor );
+	} )
+	.catch( error => {
+		console.error( error );
+	} );
+
+
