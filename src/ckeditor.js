@@ -83,7 +83,7 @@ ClassicEditor.defaultConfig = {
 			'undo',
             'redo',
             
-            'Base64UploadAdapter'
+            'base64uploadadapter'
 		]
 	},
 	image: {
